@@ -1,362 +1,120 @@
 <template>
   
   <v-app>
-    <!-- logo and landing first section  -->
-    <v-container fluid pa-0>
-      <v-img
-        :src="require(`@/assets/media/mainBanner.png`)"
-       
-      >
-        <v-container>
-          <v-row>
-            <v-card-title class="white--text pt-10">
-            <!-- <h1>Fairplay Market</h1> -->
-            <v-img
-              :src="require(`@/assets/media/logo.png`)"
-              max-height="205"
-              max-width="277"
-            >
-            </v-img>
-          </v-card-title>
-         </v-row>
-          <v-row>
-            <v-col cols="12 " sm="6"  xl="12" class="content">
-              <v-row class="mt-2">
-                <v-col
-                  v-for="title in Data"
-                  :key="title.id"
-                  cols="12"
-                  sm="12"
-                  class="mb-3"
-                >
-                  <div>
-                    <v-card class="card d-flex" elevation="0" title>
-                      <v-card-title>
-                        <v-flex class="d-flex">
-                          <div>
-                            <v-img
-                              :src="require(`@/assets/media/num/Line 8.png`)"
-                              class="mr-10 pa-1"
-                            >
-                            </v-img>
-                          </div>
-                          <div>
-                            <v-img
-                              :src="require(`@/assets/media/num/01.png`)"
-                              class="num mr-5"
-                            >
-                            </v-img>
-                          </div>
-                          <div>
-                            {{ title.Title }}
-                          </div>
-                        </v-flex>
-                      </v-card-title>
-                    </v-card>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-col>
-            <v-col cols="12" sm="6" xl="12">
-              <v-card-title>
-                <v-img
-                  :src="require(`@/assets/media/Vector Smart ObjectDWDW.png`)"
-                >
-                </v-img>  
-              </v-card-title>
-              <div>'</div>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-img>
-    </v-container>
+    <LandingPage/>
+    <WorkSection/>
+    <demoIdSection/>
+    <whatsappSection/>
     
-    <!-- 2nd section -->
-    <v-container fluid pa-0 style="background-color: #07083a">
-      <v-img
-        :src="require(`@/assets/media/section2bg.png`)"
-       
-      >
-        <v-container>
-          <v-row>
-            <v-col cols="12" sm="6" xl="12" class="content mt-10">
-              <v-card-title class="white--text pt-10">
-                <div>
-                  <h1>HOW IT WORKS ?</h1>
-                </div>
-                <v-text class="mt-10">
-                  <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam placeat nulla, quam odio error reprehenderit
-                    perferendis ducimus corrupti. Dignissimos, vel.
-                  </div>
-                </v-text>
-            </v-card-title>
-            </v-col>
-         </v-row>
-          <v-row>
-            <v-col cols="12" sm="6"  xl="6" class="content">
-              <v-row class="mt-2">
-                <v-col
-                  v-for="title in Work"
-                  :key="title.id"
-                  cols="12"
-                  sm="12"
-                  class="mb-3"
-                 >
-                  <div>
-                    <v-card class="card d-flex" elevation="0" title>
-                      <v-card-title>
-                        <v-flex class="d-flex">
-                          <div>
-                            <v-img
-                              :src="require(`@/assets/media/num/Line 8.png`)"
-                              class="mr-10 pa-1"
-                            >
-                            </v-img>
-                          </div>
-                          <div>
-                            <v-img
-                              :src="require(`@/assets/media/num/01.png`)"
-                              class="num mr-5"
-                            >
-                            </v-img>
-                          </div>
-                          <div>
-                            {{ title.Title }}
-                          </div>
-                        </v-flex>
-                      </v-card-title>
-                    </v-card>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-col>
-            <v-col cols="6" sm="6"  xl="6">
-                  <iframe src="https://www.youtube.com/embed/4FSUCRodPr4"
-                  style="width:100%; height:100%" 
-                      title="Guide to Download Fairplay App" frameborder="0" scrolling="no"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen="allowfullscreen" ></iframe>
-                    
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-img>
-    </v-container>
-    <!-- <v-container fluid pa-0 style="background-color: #07083a">
-      <v-img
-        :src="require(`@/assets/media/section2bg.png`)"
-        
-      >
-        <v-container>
-          <v-row no-gutters>
-            <v-col cols="12" sm="6" class="content mt-10">
-              <v-card-title class="white--text pt-10">
-                <div>
-                  <h1>HOW IT WORKS ?</h1>
-                </div>
-                <v-text class="mt-10">
-                  <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam placeat nulla, quam odio error reprehenderit
-                    perferendis ducimus corrupti. Dignissimos, vel.
-                  </div>
-                </v-text>
-              </v-card-title>
-
-              <v-row class="mt-15">
-                <v-col
-                  v-for="title in Work"
-                  :key="title.id"
-                  cols="12"
-                  sm="12"
-                  class="mb-10"
-                >
-                  <div>
-                    <v-card class="card d-flex" elevation="0" title>
-                      <v-card-title>
-                        <v-flex class="d-flex">
-                          <div>
-                            <v-img
-                              :src="require(`@/assets/media/num/Line 8.png`)"
-                              class="mr-10 pa-1"
-                            >
-                            </v-img>
-                          </div>
-                          <div>
-                            <v-img
-                              :src="require(`@/assets/media/num/01.png`)"
-                              class="num mr-5"
-                            >
-                            </v-img>
-                          </div>
-                          <div>
-                            {{ title.Title }}
-                          </div>
-                        </v-flex>
-                      </v-card-title>
-                    </v-card>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-col>
-            <v-col cols="12" sm="6" class="mt-10">
-              <v-card-title>
-                <h1>hii</h1>
-              </v-card-title>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-img>
-    </v-container> -->
-    <!-- 3rd section -->
-    <v-container fluid pa-0>
-      <v-img :src="require(`@/assets/media/section3bg.png`)">
-        <v-container>
-          <v-row no-gutters>
-            <v-col cols="12" sm="6" class="content mt-10">
-              <v-card-title class="white--text pt-10">
-                <div>
-                  <h1>GET YOUR DEMO ID</h1>
-                </div>
-                <v-text class="mt-10">
-                  <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam placeat nulla, quam odio error reprehenderit
-                    perferendis ducimus corrupti. Dignissimos, vel.
-                  </div>
-                </v-text>
-                <div>
-                  <v-btn>h111</v-btn>
-                  <v-btn>h111</v-btn>
-
-                </div>
-              </v-card-title>
-            </v-col>
-
-            <v-col cols="12" sm="6">
-              <v-img
-                :src="require(`@/assets/media/Design.png`)"
-                max-width="300"
-                class="ml-16"
-              >
-              </v-img>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-img>
-    </v-container>
-
-    <!-- 4th section -->
-    <v-container fluid pa-0>
-      <v-img :src="require(`@/assets/media/section4bg.png`)">
-        <v-container>
-          <v-row no-gutters>
-            <v-col
-              cols="12"
-              sm="6"
-              class="d-flex"
-              style="align-items: center"
-            >
-              <v-img
-                :src="require(`@/assets/media/Vector Smart ObjectCSC.png`)"
-                max-width="300"
-                class="ml-16"
-              >
-              </v-img>
-            </v-col>
-            <v-col cols="12" sm="6" class="content mt-10">
-              <v-card-title class="white--text pt-10">
-                <v-text>
-                  <h1>GET AN ID INSTANTLY ON WHATSAPP</h1>
-                </v-text>
-                <v-text class="mt-5">
-                  <h3>Get in touch with our customer care</h3>
-                </v-text>
-                <v-text class="mt-5">
-                  <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dignissimos eos ipsa error sed rem.</h4>
-                </v-text>
-                <v-text class="mt-5">
-                  <h4>Whatsapp us on</h4>
-                  <v-btn>+91 99988 888888</v-btn>
-                </v-text>
-                <v-text class="mt-5">
-                  <h4>With our step-by-step guide for beginners</h4>
-                  <v-btn>+91 99988 99988</v-btn>
-                </v-text>
-                <v-text class="">
-
-                </v-text>
-                <v-text class="mt-10">
-                  <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam placeat nulla, quam odio error reprehenderit
-                    perferendis ducimus corrupti. Dignissimos, vel.
-                  </div>
-                </v-text>
-              </v-card-title>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-img>
-    </v-container>
-
   </v-app>
   
 </template>
 
 <script>
+import LandingPage from '../components/landingPage.vue';
+import WorkSection from '../components/workSection.vue';
+
 export default {
-name: "IndexPage",
-data() {
-  return {
-    Data: [],
-    Work: [],
-  };
-},
-created() {
-  this.data();
-  this.work();
-},
-methods: {
-  async data() {
-    await fetch("http://localhost:8080/data")
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-      })
-      .then((data) => {
-        this.Data = data;
-
-        // this.title = Data.Title
-        console.log(this.Data);
-
-        // console.log(this.title)
-      });
-  },
-  async work() {
-    await fetch("http://localhost:8080/work")
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-      })
-      .then((data) => {
-        this.Work = data;
-
-        // this.title = Data.Title
-        console.log(this.Work);
-
-        // console.log(this.title)
-      });
-  },
-},
+    name: "IndexPage",
+    data() {
+        return {
+            Data: [
+                {
+                    "Title": "No Commission",
+                    "icon": "01.png",
+                    "description": "Quick and easy access to your money any time on (FairPlay Share Market?). Avail daily withdrawals and trade faster and better!",
+                    "id": 1
+                },
+                {
+                    "Title": "No DEMAT and KYC required",
+                    "icon": "02.png",
+                    "description": "High market brokerage eating away at your profits? Not anymore! With (FP Share Market?)’s lowest (?) brokerage, your money is all yours!",
+                    "id": 2
+                },
+                {
+                    "Title": "Low brokerage",
+                    "icon": "03.png",
+                    "description": "Do away with lengthy account creation and verification troubles with FPSM’s hassle free trading. All you need is to get started and get trading.",
+                    "id": 3
+                },
+                {
+                    "Title": "Low MCX/NSC/COMX markets available",
+                    "icon": "04.png",
+                    "description": "FPSM is your one stop shop for all your trading needs. Find all the popular markets under one roof and gain big profits.",
+                    "id": 4
+                }
+            ],
+            Work: [
+                {
+                    "Title": "Click on WhatsApp",
+                    "icon": "work1.png",
+                    "description": "Quick and easy access to your money any time on (FairPlay Share Market?). Avail daily withdrawals and trade faster and better!",
+                    "id": 1
+                },
+                {
+                    "Title": "Get in touch with Agent",
+                    "icon": "work2.png",
+                    "description": "High market brokerage eating away at your profits? Not anymore! With (FP Share Market?)’s lowest (?) brokerage, your money is all yours!",
+                    "id": 2
+                },
+                {
+                    "Title": "Deposit and Get ID",
+                    "icon": "work3.png",
+                    "description": "Do away with lengthy account creation and verification troubles with FPSM’s hassle free trading. All you need is to get started and get trading.",
+                    "id": 3
+                },
+                {
+                    "Title": "Start Trading",
+                    "icon": "work4.png",
+                    "description": "FPSM is your one stop shop for all your trading needs. Find all the popular markets under one roof and gain big profits.",
+                    "id": 4
+                }
+            ],
+        };
+    },
+    created() {
+        this.data();
+        this.work();
+    },
+    methods: {
+        async data() {
+            await fetch("http://localhost:8080/data")
+                .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                }
+            })
+                .then((data) => {
+                this.Data = data;
+                // this.title = Data.Title
+                console.log(this.Data);
+                // console.log(this.title)
+            });
+        },
+        async work() {
+            await fetch("http://localhost:8080/work")
+                .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                }
+            })
+                .then((data) => {
+                this.Work = data;
+                // this.title = Data.Title
+                console.log(this.Work);
+                // console.log(this.title)
+            });
+        },
+    },
+    components: { LandingPage, WorkSection }
 };
 </script>
 
 <style scoped>
+.section1{
+  background: url('@/assets/media/mainBanner.png') no-repeat center center !important;
+  background-size: cover;
+}
 .banner-img {
 height: 100vh;
 background: transparent;
@@ -373,6 +131,38 @@ max-height: 100%;
 @media only screen and (min-width: 1024px) {
 .content {
   padding: 30px;
+  z-index: 2;
+}
+.phone-img{
+ 
+}
+.tradebg-img{
+  z-index: 1;
+}
+.bg3{
+  z-index: 1;
+}
+.hand-img{
+  z-index:2;
+}
+.main-section3{
+  position: relative;
+  z-index: 1111;
+}
+.main-section3bg{
+  position: initial;
+}
+.main-section3img{
+  position:absolute;
+  z-index: 1;
+  bottom: -33px
+}
+.v-card__title{
+  word-break: break-word;
+  line-height: inherit;
+} 
+h1{
+  font-family: 'Bebas Neue', cursive;
 }
 }
 </style>
