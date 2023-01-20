@@ -3,7 +3,7 @@
         <v-container fluid pa-0 style="background-color: ">
             <v-img
             class="tradebg-img"
-            :src="require(`@/assets/media/section2bg.png`)"
+            :src="require(`@/assets/media/workSectionBg.webp`)"
             >
               <v-container>
                 <v-row>
@@ -51,7 +51,8 @@
                                 <div>
                                   <v-img
                                     :src="require(`@/assets/media/` + title.icon )"
-                                    class="mr-10 pa-1"
+                                    class="mr-10"
+                                    max-width="45"
                                   >
                                   </v-img>
                                 </div>
@@ -93,25 +94,25 @@
                 Work: [
                 {
                     "Title": "Click on WhatsApp",
-                    "icon": "work1.png",
+                    "icon": "work1.webp",
                     "description": "Quick and easy access to your money any time on (FairPlay Share Market?). Avail daily withdrawals and trade faster and better!",
                     "id": 1
                 },
                 {
                     "Title": "Get in touch with Agent",
-                    "icon": "work2.png",
+                    "icon": "work2.webp",
                     "description": "High market brokerage eating away at your profits? Not anymore! With (FP Share Market?)’s lowest (?) brokerage, your money is all yours!",
                     "id": 2
                 },
                 {
                     "Title": "Deposit and Get ID",
-                    "icon": "work3.png",
+                    "icon": "work3.webp",
                     "description": "Do away with lengthy account creation and verification troubles with FPSM’s hassle free trading. All you need is to get started and get trading.",
                     "id": 3
                 },
                 {
                     "Title": "Start Trading",
-                    "icon": "work4.png",
+                    "icon": "work4.webp",
                     "description": "FPSM is your one stop shop for all your trading needs. Find all the popular markets under one roof and gain big profits.",
                     "id": 4
                 }

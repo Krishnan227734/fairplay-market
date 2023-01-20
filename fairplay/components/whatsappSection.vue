@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-container fluid pa-0>
-            <v-img :src="require(`@/assets/media/section4bg.png`)">
+            <v-img :src="require(`@/assets/media/whatsappSection.webp`)">
               <v-container>
                 <v-row no-gutters>
                   <v-col
@@ -11,7 +11,7 @@
                     style="align-items: center"
                   >
                     <v-img
-                      :src="require(`@/assets/media/Vector Smart ObjectCSC.png`)"
+                      :src="require(`@/assets/media/Vector-Smart-ObjectCSC.webp`)"
                       max-width="381"
                       class=""
                     >
@@ -81,10 +81,6 @@
 </script>
 
 <style scoped>
-section1{
-  background: url('@/assets/media/mainBanner.png') no-repeat center center !important;
-  background-size: cover;
-}
 .banner-img {
 height: 100vh;
 background: transparent;

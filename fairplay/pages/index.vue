@@ -72,49 +72,46 @@ export default {
             ],
         };
     },
-    created() {
-        this.data();
-        this.work();
-    },
-    methods: {
-        async data() {
-            await fetch("http://localhost:8080/data")
-                .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                }
-            })
-                .then((data) => {
-                this.Data = data;
-                // this.title = Data.Title
-                console.log(this.Data);
-                // console.log(this.title)
-            });
-        },
-        async work() {
-            await fetch("http://localhost:8080/work")
-                .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                }
-            })
-                .then((data) => {
-                this.Work = data;
-                // this.title = Data.Title
-                console.log(this.Work);
-                // console.log(this.title)
-            });
-        },
-    },
+    // created() {
+    //     this.data();
+    //     this.work();
+    // },
+    // methods: {
+    //     async data() {
+    //         await fetch("http://localhost:8080/data")
+    //             .then((response) => {
+    //             if (response.ok) {
+    //                 return response.json();
+    //             }
+    //         })
+    //             .then((data) => {
+    //             this.Data = data;
+    //             // this.title = Data.Title
+    //             console.log(this.Data);
+    //             // console.log(this.title)
+    //         });
+    //     },
+    //     async work() {
+    //         await fetch("http://localhost:8080/work")
+    //             .then((response) => {
+    //             if (response.ok) {
+    //                 return response.json();
+    //             }
+    //         })
+    //             .then((data) => {
+    //             this.Work = data;
+    //             // this.title = Data.Title
+    //             console.log(this.Work);
+    //             // console.log(this.title)
+    //         });
+    //     },
+    // },
     components: { LandingPage, WorkSection }
 };
 </script>
 
 <style scoped>
-.section1{
-  background: url('@/assets/media/mainBanner.png') no-repeat center center !important;
-  background-size: cover;
-}
+
 .banner-img {
 height: 100vh;
 background: transparent;

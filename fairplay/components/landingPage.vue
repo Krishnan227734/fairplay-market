@@ -2,7 +2,7 @@
     <div>
         <v-container class="main-section1" fluid pa-0>
             <v-img
-            :src="require(`@/assets/media/mainBanner.png`)"
+            :src="require(`@/assets/media/mainBanner.webp`)"
             class="main-section1bg"
             >
               <v-container>
@@ -10,7 +10,7 @@
                   <v-card-title class="white--text pt-10">
                   <!-- <h1>Fairplay Market</h1> -->
                   <v-img
-                    :src="require(`@/assets/media/logo.png`)"
+                    :src="require(`@/assets/media/logo.webp`)"
                     max-height="205"
                     max-width="277"
                   >
@@ -33,15 +33,16 @@
                               <v-flex class="d-flex">
                                 <div>
                                   <v-img
-                                    :src="require(`@/assets/media/num/Line 8.png`)"
+                                    :src="require(`@/assets/media/Line.webp`)"
                                     class="mr-5 "
                                   >
                                   </v-img>
                                 </div>
                                 <div>
                                   <v-img
-                                    :src="require(`@/assets/media/num/`+ title.icon )"
-                                    class="num mr-5"
+                                  :src="require(`@/assets/media/` + title.icon )"
+    
+                                  class="num mr-5"
                                   >
                                   </v-img>
                                 </div>
@@ -59,7 +60,7 @@
                     <v-card-title>
                       <v-img
                         
-                        :src="require(`@/assets/media/Vector Smart ObjectDWDW.png`)"
+                        :src="require(`@/assets/media/Vector-Smart-ObjectDWDW.webp`)"
                         class="main-section1img"
                       >
                       </v-img>  
@@ -80,25 +81,25 @@
                 Data: [
                 {
                     "Title": "No Commission",
-                    "icon": "01.png",
+                    "icon": "01.webp",
                     "description": "Quick and easy access to your money any time on (FairPlay Share Market?). Avail daily withdrawals and trade faster and better!",
                     "id": 1
                 },
                 {
                     "Title": "No DEMAT and KYC required",
-                    "icon": "02.png",
+                    "icon": "02.webp",
                     "description": "High market brokerage eating away at your profits? Not anymore! With (FP Share Market?)’s lowest (?) brokerage, your money is all yours!",
                     "id": 2
                 },
                 {
                     "Title": "Low brokerage",
-                    "icon": "03.png",
+                    "icon": "03.webp",
                     "description": "Do away with lengthy account creation and verification troubles with FPSM’s hassle free trading. All you need is to get started and get trading.",
                     "id": 3
                 },
                 {
                     "Title": "Low MCX/NSC/COMX markets available",
-                    "icon": "04.png",
+                    "icon": "04.webp",
                     "description": "FPSM is your one stop shop for all your trading needs. Find all the popular markets under one roof and gain big profits.",
                     "id": 4
                 }
@@ -109,10 +110,7 @@
 </script>
 
 <style scoped>
-section1{
-    background: url('@/assets/media/mainBanner.png') no-repeat center center !important;
-    background-size: cover;
-  }
+
   .banner-img {
   height: 100vh;
   background: transparent;

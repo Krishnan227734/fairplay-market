@@ -4,7 +4,7 @@
             <v-img 
               class="main-section3bg"
               
-              :src="require(`@/assets/media/section3bg.png`)"
+              :src="require(`@/assets/media/demoIdSection.webp`)"
       
             >
               <v-container>
@@ -48,7 +48,7 @@
                   <v-col cols="12" sm="6" >
                     
                       <v-img
-                        :src="require(`@/assets/media/Design.png`)"
+                        :src="require(`@/assets/media/Design.webp`)"
                         max-width="364"
                         class=" main-section3img ml-16"
       
@@ -70,10 +70,7 @@
 </script>
 
 <style scoped>
-section1{
-    background: url('@/assets/media/mainBanner.png') no-repeat center center !important;
-    background-size: cover;
-  }
+
   .banner-img {
   height: 100vh;
   background: transparent;
